@@ -1,0 +1,92 @@
+﻿<script>
+    function Currency(name, iso, exchangeRate) {
+        this.name = name;
+        this.iso = iso;
+        this.exchangeRate = exchangeRate;
+    }
+    Currency.prototype.toString = function () {
+        var output = this.name + ' ' + this.iso + ' ' + this.exchangeRate;
+        return output;
+    }
+    function CurrencyCatalogue() {
+        this.currencyObjects = new Array();
+    }
+    CurrencyCatalogue.prototype.createNewCurrency = function (name, iso, exchangeRate) {
+        var newCurrencyObject = new Currency(name, iso, exchangeRate);
+        this.currencyObjects.push(newCurrencyObject);
+    }
+    CurrencyCatalogue.prototype.populateData = function () {
+        var currencyObject1 = new Currency('Euro', 'EUR', 0.134371);
+        this.currencyObjects.push(currencyObject1);
+        var currencyObject2 = new Currency('US Dollar', 'USD', 0.16448);
+        this.currencyObjects.push(currencyObject2);
+        var currencyObject3 = new Currency('British Pound', 'GBP', 0.11842);
+        this.currencyObjects.push(currencyObject3);
+        var currencyObject4 = new Currency('Swedish Krona', 'SEK', 1.133013);
+        this.currencyObjects.push(currencyObject4);
+    }
+    CurrencyCatalogue.prototype.getCurrencyByISO = function (isoToGet) {
+        for (var currentCurrency of this.currencyObjects) {
+            if (currentCurrency.iso == isoToGet) {
+                return currentCurrency;
+            }
+        }
+    }
+    function compareExchangeRates(a, b) {
+        if (a.exchangeRate < b.exchangeRate) {
+            return 1;
+        }
+        if (a.exchangeRate > b.exchangeRate) {
+            return -1;
+        }
+        return 0;
+    }
+    CurrencyCatalogue.prototype.getCurrencyWithHighestExchangeRate = function () {
+        this.currencyObjects.sort(compareExchangeRates);
+        return this.currencyObjects[0]
+    }
+    CurrencyCatalogue.prototype.exchange = function (iso1, iso2, amount) {
+        for (var currentCurrency of this.currencyObjects) {
+            if (currentCurrency.iso == iso1) {
+                var currency1 = currentCurrency;
+            }
+        }
+        for (var currentCurrency of this.currencyObjects) {
+            if (currentCurrency.iso == iso2) {
+                var currency2 = currentCurrency;
+            }
+        }
+        var dkkAmount = amount / currency1.exchangeRate;
+        var exchangedAmount = dkkAmount * currency2.exchangeRate;
+        return amount + ' ' + iso1 + ' is equal to ' + exchangedAmount + ' ' + iso2;
+    }
+    CurrencyCatalogue.prototype.toString = function () {
+        var output = '';
+        for (var currentCurrency of this.currencyObjects) {
+            output += currentCurrency.toString() + '\n';
+        }
+        return output;
+    }
+
+    var currencyRepo = new CurrencyCatalogue()
+
+    //Test createNewCurrency
+    currencyRepo.createNewCurrency('Norwegian Krone', 'NOK', 1.30157);
+    alert(currencyRepo.toString());
+
+    //Test populateData
+    currencyRepo.populateData();
+    alert(currencyRepo.toString());
+
+    //Test getCurrencyByISO
+    var usdISO = currencyRepo.getCurrencyByISO('USD');
+    alert(usdISO.toString());
+
+    //Test getCurrencyWithHighestExchangeRate
+    var highestExchange = currencyRepo.getCurrencyWithHighestExchangeRate();
+    alert(highestExchange.toString());
+
+    //Test exchange
+    var exchangeCurrencies = currencyRepo.exchange('USD', 'EUR', 10);
+    alert(exchangeCurrencies);
+</script>

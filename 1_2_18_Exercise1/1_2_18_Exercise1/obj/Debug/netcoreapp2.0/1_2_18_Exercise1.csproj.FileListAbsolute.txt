@@ -1,0 +1,11 @@
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\bin\Debug\netcoreapp2.0\1_2_18_Exercise1.deps.json
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\bin\Debug\netcoreapp2.0\1_2_18_Exercise1.runtimeconfig.json
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\bin\Debug\netcoreapp2.0\1_2_18_Exercise1.runtimeconfig.dev.json
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\bin\Debug\netcoreapp2.0\1_2_18_Exercise1.dll
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\bin\Debug\netcoreapp2.0\1_2_18_Exercise1.pdb
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\obj\Debug\netcoreapp2.0\1_2_18_Exercise1.csprojResolveAssemblyReference.cache
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\obj\Debug\netcoreapp2.0\1_2_18_Exercise1.csproj.CoreCompileInputs.cache
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\obj\Debug\netcoreapp2.0\1_2_18_Exercise1.AssemblyInfoInputs.cache
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\obj\Debug\netcoreapp2.0\1_2_18_Exercise1.AssemblyInfo.cs
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\obj\Debug\netcoreapp2.0\1_2_18_Exercise1.dll
+C:\Users\Matt\Documents\Visual Studio 2017\Projects\1_2_18_Exercise1\1_2_18_Exercise1\obj\Debug\netcoreapp2.0\1_2_18_Exercise1.pdb

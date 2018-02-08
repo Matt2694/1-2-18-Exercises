@@ -1,0 +1,15 @@
+﻿<script>
+    var isoCode = prompt("ISO code to get exchange rate");
+
+    function returnExchangeRate(_iso) {
+        switch (_iso) {
+            case "EUR", "eur": result = 0.134371; break;
+            default: result = 0; break;
+        }
+        return result;
+    }
+
+    var result = returnExchangeRate(isoCode);
+
+    alert("1 DKK is equal to " + result + " " + isoCode);
+</script>

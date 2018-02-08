@@ -1,0 +1,16 @@
+﻿<script>
+    function Currency(name, iso, exchangeRate) {
+        this.name = name;
+        this.iso = iso;
+        this.exchangeRate = exchangeRate;
+    }
+    Currency.prototype.toString = function () {
+        var output = this.name + ' ' + this.iso + ' ' + this.exchangeRate;
+        return output;
+    }
+    var currencyObject = new Currency('Euro', 'EUR', 0.134371);
+    var test = prompt('View toString() ?', 'yes/no');
+    if (test == 'yes') {
+        alert(currencyObject.toString());
+    }
+</script>
